@@ -1,0 +1,32 @@
+{
+  "name": "redux-midi",
+  "version": "0.1.0",
+  "description": "An intuitive midi state reducer for redux.",
+  "main": "dist/redux-midi.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alaingalvan/webvst.git"
+  },
+  "keywords": [
+    "web",
+    "vst",
+    "audio",
+    "input"
+  ],
+  "author": "Alain Galvan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alaingalvan/webvst/issues"
+  },
+  "homepage": "https://github.com/alaingalvan/webvst#readme",
+  "devDependencies": {
+    "@types/webmidi": "0.0.29",
+    "ava": "^0.16.0",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.0.2",
+    "webpack": "^2.1.0-beta.22"
+  }
+}
