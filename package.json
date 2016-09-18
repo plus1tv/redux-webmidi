@@ -1,8 +1,9 @@
 {
   "name": "redux-midi",
   "version": "0.1.0",
-  "description": "An intuitive midi state reducer for redux.",
+  "description": "🎹 Intuitive Redux reducer/action creators for handling MIDI devices. ",
   "main": "dist/redux-midi.js",
+  "typings": "dist/redux-midi.d.ts",
   "scripts": {
     "test": "ava"
   },
@@ -28,5 +29,8 @@
     "ts-loader": "^0.8.2",
     "typescript": "^2.0.2",
     "webpack": "^2.1.0-beta.22"
+  },
+  "peerDependencies": {
+    "redux": "^3.6.0"
   }
 }
