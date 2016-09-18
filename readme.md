@@ -1,3 +1,5 @@
+![Cover Image][cover-url]
+
 # redux-webmidi
 
 [![Npm Package][npm-img]][npm-url]
@@ -44,6 +46,7 @@ let App = ({ midi }) => (
 
 ```
 
+[cover-url]: docs/cover.png
 [license-img]: http://img.shields.io/:license-mit-blue.svg?style=flat-square
 [license-url]: https://opensource.org/licenses/MIT
 [david-url]: https://david-dm.org/stelatech/redux-webmidi
