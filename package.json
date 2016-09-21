@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/alaingalvan/webvst#readme",
   "devDependencies": {
-    "@types/webmidi": "0.0.29",
+    "@types/webmidi": "0.0.30",
     "ava": "^0.16.0",
     "ts-loader": "^0.8.2",
     "typescript": "^2.0.2",

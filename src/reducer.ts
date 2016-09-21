@@ -37,9 +37,8 @@ let queueMessage = (state, message) => {
     let status = message.data[0];
     let curKey = message.data[1];
     let velocity = message.data[2];
-    let startTime = message.receivedTime;
 
-    ports[curId].keys[curKey] = {status, velocity, startTime};
+    ports[curId].keys[curKey] = {status, velocity};
 
     return Object.assign({}, state, {ports});
 }
