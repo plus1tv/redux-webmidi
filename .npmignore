@@ -8,3 +8,5 @@ definitions.d.ts
 .vscode
 tsconfig.json
 license.md
+*.log
+*.lock

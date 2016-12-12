@@ -1,8 +1,8 @@
 {
   "name": "redux-webmidi",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "🎹 Intuitive Redux reducer/action creators for handling MIDI devices. ",
-  "main": "dist/redux-midi.js",
+  "main": "dist/redux-webmidi.js",
   "scripts": {
     "build:develop": "cross-env NODE_ENV=development webpack src/redux-webmidi.ts dist/redux-webmidi.js",
     "build:production": "cross-env NODE_ENV=production webpack src/redux-webmidi.ts dist/redux-webmidi.min.js",

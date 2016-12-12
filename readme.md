@@ -2,6 +2,7 @@
 
 # redux-webmidi
 
+[![Npm Package][npm-img]][npm-url]
 [![License][license-img]][license-url]
 [![Dependency Status][david-img]][david-url]
 [![devDependency Status][david-dev-img]][david-dev-url]
