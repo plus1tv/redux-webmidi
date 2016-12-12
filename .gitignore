@@ -3,6 +3,7 @@ node_modules
 
 # Editors
 .vscode
+*.lock
 
 # Logs
 logs

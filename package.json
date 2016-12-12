@@ -1,11 +1,12 @@
 {
-  "name": "redux-midi",
+  "name": "redux-webmidi",
   "version": "0.1.0",
   "description": "🎹 Intuitive Redux reducer/action creators for handling MIDI devices. ",
   "main": "dist/redux-midi.js",
-  "typings": "dist/redux-midi.d.ts",
   "scripts": {
-    "test": "ava"
+    "build:develop": "cross-env NODE_ENV=development webpack src/redux-webmidi.ts dist/redux-webmidi.js",
+    "build:production": "cross-env NODE_ENV=production webpack src/redux-webmidi.ts dist/redux-webmidi.min.js",
+    "build:publish": "npm run build:develop && npm run build:production"
   },
   "repository": {
     "type": "git",
@@ -24,11 +25,12 @@
   },
   "homepage": "https://github.com/alaingalvan/webvst#readme",
   "devDependencies": {
+    "@types/redux": "^3.6.0",
     "@types/webmidi": "0.0.30",
-    "ava": "^0.16.0",
-    "ts-loader": "^0.8.2",
-    "typescript": "^2.0.2",
-    "webpack": "^2.1.0-beta.22"
+    "cross-env": "^3.1.3",
+    "ts-loader": "^1.3.2",
+    "typescript": "^2.1.4",
+    "webpack": "^2.1.0-beta.27"
   },
   "peerDependencies": {
     "redux": "^3.6.0"

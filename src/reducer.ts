@@ -11,9 +11,9 @@ let addPort = (state: { ports: any[] }, port) => {
     if (ports[port.id])
         ports[port.id].type = 'input/output';
     else
-        ports[port.id] = Object.assign({}, port, {keys: []});
+        ports[port.id] = {...port, keys: []};
 
-    return Object.assign({}, state, { ports });
+    return {...state, ports };
 }
 
 let removePort = (state, port) => {
@@ -26,7 +26,7 @@ let removePort = (state, port) => {
         else
             ports = ports.filter(p => p.id !== port.id);
 
-    return Object.assign({}, state, { ports });
+    return {...state,  ports };
 }
 
 let queueMessage = (state, message) => {
@@ -40,7 +40,7 @@ let queueMessage = (state, message) => {
 
     ports[curId].keys[curKey] = {status, velocity};
 
-    return Object.assign({}, state, {ports});
+    return { ...state, ports};
 }
 
 export default createReducer(initialState, {

@@ -25,6 +25,7 @@ const reducer = combineReducers({
 
 const store = createStore(reducer);
 
+// Wrap your store with a proxy provider
 midiProvider(store);
 
 ```
@@ -40,6 +41,50 @@ let App = ({ midi }) => (
   </div>
 );
 
+```
+
+## Data Layout
+
+```js
+type KeyMap {
+  // The index is the key on the keyboard.
+  [index: number]: {
+    // The status keycode
+    status: number,
+    velocity: number
+  }
+};
+
+type MidiDevice: {
+  id: number,
+  name: string,
+  manufacturer: string,
+  state: 'connected' | 'disconnected',
+  type: 'input' | 'output' | 'input/output',
+  keys: KeyMap
+};
+
+type WebMidiState = {
+  ports: MidiDevice[]
+};
+```
+
+Refer to the official [Midi specification](https://www.midi.org/specifications/item/table-1-summary-of-midi-message) or [WebMidi](https://webaudio.github.io/web-midi-api/) specification if you have any other questions.
+
+The first byte (denoted as zero in all examples in the table) describes the midi channel, whereas the larger byte describes the actual message.
+
+| Message  | Status |
+|----------|--------|
+| Note Off | `0x80` |
+| Note On  | `0x90` | 
+
+```js
+let {keys} = this.state.port[0];
+keys.map( key => {
+  if (key.status & 0x90) {
+    playSound('./bee.wav');
+  }
+});
 ```
 
 [cover-url]: docs/cover.png

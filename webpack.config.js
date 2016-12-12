@@ -9,40 +9,38 @@ let config = {
     libraryTarget: 'umd'
   },
   resolve: {
-    extensions: ['', '.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx'],
     modules: [
       path.resolve('./src'),
       'node_modules'
     ]
   },
   module: {
-    loaders: [
-      {
-        test: /\.ts/,
-        exclude: /node_modules/,
-        loader: 'ts-loader'
+    loaders: [{
+      test: /\.ts/,
+      exclude: /node_modules/,
+      loader: 'ts-loader',
+      query: {
+        presets: ["es2015"]
       }
-    ]
+    }]
   },
 
   node: {
     Buffer: false
   },
 
-  externals: [
-    {
-      'redux': {
-        root: 'redux',
-        commonjs2: 'redux',
-        commonjs: 'redux',
-        amd: 'redux'
-      },
-    }
-  ],
+  externals: [{
+    'redux': {
+      root: 'redux',
+      commonjs2: 'redux',
+      commonjs: 'redux',
+      amd: 'redux'
+    },
+  }],
 
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
