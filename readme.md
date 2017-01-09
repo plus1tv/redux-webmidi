@@ -46,8 +46,8 @@ let App = ({ midi }) => (
 
 ## Data Layout
 
-```js
-type KeyMap {
+```ts
+type KeyMap = {
   // The index is the key on the keyboard.
   [index: number]: {
     // The status keycode
@@ -56,7 +56,7 @@ type KeyMap {
   }
 };
 
-type MidiDevice: {
+type MidiDevice = {
   id: number,
   name: string,
   manufacturer: string,
