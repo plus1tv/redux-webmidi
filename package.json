@@ -1,16 +1,18 @@
 {
   "name": "redux-webmidi",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "🎹 Intuitive Redux reducer/action creators for handling MIDI devices. ",
   "main": "dist/redux-webmidi.js",
+  "browser": "dist/redux-webmidi.browser.js",
+  "typings": "dist/src/redux-webmidi.d.ts",
+  "types": "dist/src/redux-webmidi.d.ts",
   "scripts": {
-    "build:develop": "cross-env NODE_ENV=development webpack src/redux-webmidi.ts dist/redux-webmidi.js",
-    "build:production": "cross-env NODE_ENV=production webpack src/redux-webmidi.ts dist/redux-webmidi.min.js",
-    "build:publish": "npm run build:develop && npm run build:production"
+    "build": "cross-env NODE_ENV=production ts-node webpack.ts",
+    "start": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alaingalvan/webvst.git"
+    "url": "git+https://github.com/plus1tv/redux-webmidi.git"
   },
   "keywords": [
     "web",
@@ -21,18 +23,19 @@
   "author": "Alain Galvan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alaingalvan/webvst/issues"
+    "url": "https://github.com/plus1tv/redux-webmidi/issues"
   },
-  "homepage": "https://github.com/alaingalvan/webvst#readme",
+  "homepage": "https://github.com/plus1tv/redux-webmidi#readme",
   "devDependencies": {
-    "@types/redux": "^3.6.0",
-    "@types/webmidi": "0.0.30",
-    "cross-env": "^3.1.3",
-    "ts-loader": "^1.3.2",
-    "typescript": "^2.1.4",
-    "webpack": "^2.1.0-beta.27"
+    "@types/redux": "^3.6.31",
+    "@types/webmidi": "2.0.4",
+    "cross-env": "^7.0.3",
+    "ts-loader": "^8.0.17",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3",
+    "webpack": "^5.24.3"
   },
   "peerDependencies": {
-    "redux": "^3.6.0"
+    "redux": "^4.x || ^3.x"
   }
 }

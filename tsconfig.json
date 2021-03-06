@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "lib": [
       "es2017",
       "es2017.object",
@@ -15,16 +15,21 @@
       "dom"
     ],
     "module": "commonjs",
-    "declaration": false,
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationMap": false,
+    "declarationDir": "dist",
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
     "removeComments": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noEmitHelpers": false,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "jsx": "react"
+    "sourceMap": false,
+    "strictNullChecks": false,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "compileOnSave": false,
   "buildOnSave": false
